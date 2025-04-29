@@ -1,17 +1,19 @@
-import { useState } from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Home from './pages/Home';
 
-
-function App() {
-  const [count, setCount] = useState(0)
-  setCount(1);
-  console.log(count);
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <h3>Teste Frontend PL </h3>
-      </div>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        {}
+        <Route path="/" element={<Login />} />
+        {}
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;

@@ -1,0 +1,122 @@
+/* --- Cores principais --- */
+:root {
+    --color-primary: #FF577F;
+    --color-primary-focus: #FF427F;
+    --color-primary-negative: #59323F;
+
+    /* Escala de cinza */
+    --blue-2: #121214;
+    --blue-1: #212529;
+    --grey-2: #343B41;
+    --grey-1: #868E96;
+    --grey-0: #F8F9FA;
+
+    /* Feedback */
+    --success: #3FE864;
+    --negative: #E83F5B;
+
+    /* Tipografia */
+    --font-title1: 'Inter', sans-serif;
+    --font-title2: 'Inter', sans-serif;
+    --font-headline: 'Inter', sans-serif;
+    --font-headline-bold: 'Inter', sans-serif;
+    --font-paragraph: 'Inter', sans-serif;
+}
+
+/* --- Estilo geral --- */
+body {
+    font-family: var(--font-paragraph);
+    background-color: var(--grey-0);
+    color: var(--blue-1);
+    margin: 0;
+    padding: 0;
+}
+
+input, button {
+    font-family: var(--font-paragraph);
+}
+
+/* --- Tipografia --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-title1);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--blue-2);
+}
+
+p {
+    font-size: 16px;
+    color: var(--blue-2);
+}
+
+button {
+    font-weight: bold;
+}
+
+/* --- Inputs --- */
+input.input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--grey-1);
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: var(--grey-2);
+    color: var(--blue-2);
+}
+
+input.input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/* --- Botões --- */
+button.button {
+    padding: 12px;
+    width: 100%;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+button.button:hover {
+    background-color: var(--color-primary-focus);
+}
+
+button.button:disabled {
+    background-color: var(--grey-1);
+    cursor: not-allowed;
+}
+
+/* --- Botões negativos --- */
+button.button-negative {
+    background-color: var(--color-primary-negative);
+}
+
+button.button-negative:hover {
+    background-color: darkred;
+}
+
+/* --- Container --- */
+.container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container p {
+    margin: 0 0 10px 0;
+}
+
+.container h1, .container h2 {
+    margin-bottom: 10px;
+}
